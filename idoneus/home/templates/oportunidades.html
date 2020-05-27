@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+<html>
+<head>
+	<title>{% block title %} {% endblock title %}</title>
+</head>
+<body>
+{% block content %}
+<table class="table table-striped" >
+<tr>
+	<td><h6>Posicion</h6></td>
+	<td><h6>Localidad</h6></td>
+	<td><h6>Fecha</h6></td>
+	<td><h6>Final de Convocatoria</h6></td>
+</tr>
+{% for post in p %} 
+<tr>
+    <td> <a href="{% url 'position' pk=post.pk %}">{{post.position}}</a> </td>
+    <td> {{post.location}} </td>
+    <td> {{post.created_date}}</td>
+    <td> {{post.published_date}}</td>
+</tr>
+{% endfor %}
+
+
+</table>
+{% endblock content %}
+
+</body>
+</html>

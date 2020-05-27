@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+<html>
+<head>
+	<title>{% block title %} {% endblock title %}</title>
+
+</head>
+<body>
+{% block content %}
+{{data|safe}} 
+<br><br><br>
+<button href="{% url 'oportunidades' %}" type="button" class="btn btn-primary btn-lg btn-block">Enviar curriculum</button>
+
+{% endblock content %}
+</body>
+</html>

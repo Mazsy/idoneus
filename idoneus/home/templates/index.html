@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+    <title>{% block title %} Idoneus Recursos Humanos {% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="{% static 'bootstrap4/css/bootstrap.min.css' %}" rel="stylesheet">
+  <!-- Bootstrap CSS CDN -->
+  <!-- Our Custom CSS -->
+  <!-- Scrollbar Custom CSS -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css"> -->
+
+  <!-- Font Awesome JS -->
+  <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+ -->
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <img  src="{% static 'image/logo.png' %}">
+            </div>
+
+            <ul class="list-unstyled components">
+                <p>Idoneus RRHH</p>
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">¿Quienes somos?</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="#">Historia</a>
+                        </li>
+                        <li>
+                            <a href="#">Lugar</a>
+                        </li>
+                        <li>
+                            <a href="#pagSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Redes sociales</a>
+                                <ul class="collapse list-unstyled" id="pagSubmenu">
+                                    <li>
+                                    <a href="https://www.facebook.com">Facebook</a>
+                                    </li><li>
+                                    <a href="#">Instagram</a>
+                                    </li><li>
+                                    <a href="#"></a>
+                                    </li>
+                                </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Servicios</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="{% url 'gestionrrhh' %}">Gestion de RRHH</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'consultoria' %}">Consultoria Organizacional</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'intervencionesPsicolaborales' %}">Interveciones Psicolaborales</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'busquedayseleccion' %}">Búsqueda estratégica y selección de personal</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'seleccionit' %}">Seleccion IT</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="{% url 'oportunidades' %}">Oportunidad Laboral</a>
+                </li>
+                <li>
+                    <a href="#">Contactanos!</a>
+                </li>
+            </ul>
+
+            <ul class="list-unstyled CTAs">
+                <li>
+                    <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
+                </li>
+                <li>
+                    <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="navbar-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Servicios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Registra tu curriculum</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+    {% block content %}
+            <section id="preparation" class="imaginaryClass">
+                <h2>Titulo?</h2>
+                <p>Somos un equipo de profesionales formados y especializados en Gestión de Recursos Humanos y Psicología Laboral.</p><p>
+                Nuestra meta es acompañar procesos de crecimiento laboral y organizacional, promoviendo el potencial de los individuos y las organizaciones.</p>
+            </section>
+            <section id="processing">
+                 <p style="color: rgb(167,153,0)">El respeto por cada una de las partes involucradas nos distingue y da sentido a nuestras prácticas.
+            </p>
+            </section>
+            <section id="display">
+                 <table border="0" cellspacing="1" cellpadding="1" width="500" style="font-size: 12px">
+    <tbody>
+        <tr>
+            <td valign="top" align="center"><img alt="publica" src="http://www.idoneus.com.ar/FCKfiles/image/publica.png"></td>
+            <td><span style="color: rgb(128,128,128)"><strong>Cra. María Gomila</strong>. <span style="color: rgb(51,51,51)">Coordinadora General</span><br>
+            <strong>Lic. Ma. Andrea Truppia</strong>. <span style="color: rgb(51,51,51)">Responsable Área Psicolaboral</span><br>
+            <strong>Lic. Carolina Lauría</strong>. <span style="color: rgb(51,51,51)">Responsable Consultoria Externa</span><br>
+            <br>
+            <strong>Equipo Técnico</strong><br>
+            </span><span style="color: rgb(51,51,51)">Lic. Carolina Aguirre Peral<br>
+            Lic. Candelaria Saravia<br>
+            Lic. Rosario Martínez Zuviría<br>
+            Lic. Fernanda Badra<br>
+            Lic. Sol Viaut<br>
+            <br>
+            </span><span style="color: rgb(128, 128, 128);"><strong>Nueva Dirección: Av. Concepción Arenal 1156 / 846&nbsp;<br>
+            </strong></span><span style="color: rgb(128, 128, 128);"><strong>Horario de Atención: Lunes a Viernes 9hs a 17hs</strong></span><strong><span style="color: rgb(51,51,51)"><br>
+            </span></strong><span style="color: rgb(51,51,51)">             <br>
+            </span></td>
+        </tr>
+    </tbody>
+</table>
+            </section>
+           
+            <div class="line"></div>
+
+            
+    </div>
+    {% endblock content %}
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar, #content').toggleClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+    </script>
+</body>
+
+</html>
